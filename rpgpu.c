@@ -7,6 +7,7 @@ uint16_t pallet[8] = {0b0000011111000000,0b1111100000000000,0b0000000000011111,0
 uint8_t tile[25] = {};
 
 // Function to write a new 3-bit value into the array
+// TODO: Need to figure out how to store values that extend beyond a single byte.
 void write3BitValue(uint8_t* memory, int index, uint8_t value) {
     // Calculate the byte index and bit position
     int byteIndex = 1 + (index * 3) / 8;
@@ -27,6 +28,7 @@ void write3BitValue(uint8_t* memory, int index, uint8_t value) {
 }
 
 // Function to read a 3-bit value from the array
+// TODO: Need to figure out how to retrieve values that extend beyond a single byte.
 uint8_t read3BitValue(uint8_t* memory, int index) {
     // Calculate the byte index and bit position
     int byteIndex = 1 + (index * 3) / 8;
